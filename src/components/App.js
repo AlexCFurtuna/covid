@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Footer";
 import Credentials from "./Credentials";
+import Logo from "./Logo";
 
 function App() {
   const [covidRomania, setCovidCountries] = useState([]);
@@ -13,6 +14,7 @@ function App() {
   useEffect(() => {
     AOS.init({
       delay: 500,
+      duration: 600,
     });
     AOS.refresh();
     axios.get("https://corona.lmao.ninja/v2/countries/romania").then((res) => {
@@ -22,7 +24,7 @@ function App() {
 
   return (
     <div className="background">
-      <div className="brand"></div>
+      <Logo />
       <CovidCases covidRomania={covidRomania} />
       <Credentials></Credentials>
       <Footer></Footer>

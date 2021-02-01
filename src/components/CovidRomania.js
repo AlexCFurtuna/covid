@@ -2,38 +2,22 @@ import React from "react";
 import "../assets/style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMale } from "@fortawesome/free-solid-svg-icons";
-import $ from "jquery";
 const element = <FontAwesomeIcon icon={faMale} />;
-$(".count").each(function () {
-  $(this)
-    .prop("Counter", 0)
-    .animate(
-      {
-        Counter: $(this).text(),
-      },
-      {
-        duration: 5000,
-        easing: "swing",
-        step: function (now) {
-          $(this).text(Math.ceil(now));
-        },
-      }
-    );
-});
+
 export default function CovidCountries({ covidRomania }) {
   return (
     <div className="main">
       <div className="covidStats">
         <div data-aos="fade-right">
           Total number of cases
-          <p className="count">
+          <p>
             {covidRomania.cases}
             <i>{element}</i>
           </p>
         </div>
         <div data-aos="fade-right">
           Today's cases
-          <p className="count">
+          <p>
             {covidRomania.todayCases}
             <i>{element}</i>
           </p>
@@ -47,7 +31,7 @@ export default function CovidCountries({ covidRomania }) {
         </div>
         <div data-aos="fade-right">
           Today's deaths
-          <p className="count">
+          <p>
             {covidRomania.todayDeaths}
             <i>{element}</i>
           </p>

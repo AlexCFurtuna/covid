@@ -1,6 +1,4 @@
-/* html {
-  background: linear-gradient(#2193b0, #6dd5ed);
-} */
+/* Main */
 
 .main {
   display: flex;
@@ -11,8 +9,12 @@
 }
 
 .brand {
-  background: url("./covid-img-white.png") no-repeat center;
+  background: url("./covid-img-small.png") no-repeat center;
   height: 250px;
+}
+
+.covidStats {
+  font-weight: 200;
 }
 
 .covidStats, .covidText {
@@ -37,10 +39,10 @@
 .covidStats div {
   position: relative;
   left: -400px;
-  width: 120%;
+  width: 130%;
   height: 250px;
   margin: 150px 75px;
-  padding: 45px 25px 25px 25px;
+  padding: 45px 50px 25px 25px;
   text-align: right;
   border-radius: 5px;
   box-shadow: -7px 7px 3px #4392c0, 7px -7px 3px rgba(254, 78, 123);
@@ -79,10 +81,12 @@ p {
 
 .credentials p {
   font-size: 3rem;
+  font-weight: 200;
 }
 
 .credentials p span {
   color: rgba(254, 78, 123);
+  font-weight: 400;
 }
 
 .credentials p a {
@@ -90,9 +94,27 @@ p {
   color: rgba(254, 78, 123);
   transition: .5s;
   padding: 0 10px;
+  font-weight: 400;
 }
 
 .credentials p a:hover {
   color: rgba(254, 78, 123);
   text-decoration: none;
+}
+
+/* Logo */
+
+.logo {
+  padding: 100px;
+  text-align: center;
+}
+
+.logo span {
+  font-size: 5rem;
+  font-weight: 200;
+  color: white;
+  padding: 10px;
+  position: relative;
+  top: 20px;
+  margin: 0 15px;
 }
